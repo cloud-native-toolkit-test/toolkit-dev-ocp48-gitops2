@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cntk-cluster-config
+spec:
+  destination:
+    namespace: cntk
+    server: https://kubernetes.default.svc
+  project: 1-infrastructure
+  source:
+    path: payload/1-infrastructure/namespace/cntk/cluster-config
+    repoURL: https://github.com/cloud-native-toolkit-test/toolkit-dev-ocp48-gitops2
+    targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
+        - value-default.yaml
+      releaseName: cluster-config
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
