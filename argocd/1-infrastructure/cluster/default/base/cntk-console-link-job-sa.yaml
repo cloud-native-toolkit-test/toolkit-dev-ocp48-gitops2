@@ -3,6 +3,11 @@ kind: Application
 metadata:
   name: cntk-console-link-job-sa
 spec:
+  ignoreDifferences:
+    - jsonPointers:
+        - /imagePullSecrets
+        - /secrets
+      kind: ServiceAccount
   destination:
     namespace: cntk
     server: https://kubernetes.default.svc
