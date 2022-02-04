@@ -1,0 +1,10 @@
+"db_archive":
+  "storage_class": ""
+"global":
+  "storage_class": "ibmc-vpc-block-10iops-tier"
+"kafka":
+  "storage_class": ""
+  "zookeeper_storage_class": ""
+"postgres":
+  "storage_class": ""
+
