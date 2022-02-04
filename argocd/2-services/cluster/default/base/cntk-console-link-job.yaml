@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cntk-console-link-job
+spec:
+  destination:
+    namespace: cntk
+    server: https://kubernetes.default.svc
+  project: 2-services
+  source:
+    path: payload/2-services/namespace/cntk/console-link-job
+    repoURL: https://github.com/cloud-native-toolkit-test/toolkit-dev-ocp48-gitops2
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
