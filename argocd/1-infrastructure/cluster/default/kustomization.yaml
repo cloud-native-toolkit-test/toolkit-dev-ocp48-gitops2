@@ -5,3 +5,4 @@ resources:
   - base/cntk-console-link-job-rbac.yaml
   - base/cntk-console-link-job-sa.yaml
   - base/namespace-cntk.yaml
+  - base/namespace-gitops-cp-bas.yaml
