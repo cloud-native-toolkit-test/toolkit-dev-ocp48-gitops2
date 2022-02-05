@@ -5,4 +5,5 @@ resources:
   - base/cntk-console-link-job-rbac.yaml
   - base/cntk-console-link-job-sa.yaml
   - base/namespace-cntk.yaml
+  - base/openshift-marketplace-ibm-entitlement-key-bas-instance-payload.yaml
   - base/openshift-marketplace-ibm-entitlement-key.yaml
