@@ -1,0 +1,10 @@
+"name": "ibm-dv-operator-catalog-subscription"
+"operator_namespace": "ibm-common-services"
+"spec":
+  "channel": "v1.7"
+  "installPlanApproval": "Automatic"
+  "name": "ibm-dv-operator"
+  "source": "ibm-operator-catalog"
+  "sourceNamespace": "openshift-marketplace"
+"syncWave": "-5"
+
