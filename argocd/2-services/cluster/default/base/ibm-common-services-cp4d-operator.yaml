@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ibm-common-services-cp4d-operator
+spec:
+  destination:
+    namespace: ibm-common-services
+    server: https://kubernetes.default.svc
+  project: 2-services
+  source:
+    path: payload/2-services/namespace/ibm-common-services/cp4d-operator
+    repoURL: https://github.com/cloud-native-toolkit-test/toolkit-dev-ocp48-gitops2
+    targetRevision: main
+    helm:
+      releaseName: cp4d-operator
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  ignoreDifferences: []
