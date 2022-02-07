@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gitops-cp-data-virtualization-ibm-cpd-dv-subcription
+spec:
+  destination:
+    namespace: gitops-cp-data-virtualization
+    server: https://kubernetes.default.svc
+  project: 2-services
+  source:
+    path: >-
+      payload/2-services/namespace/gitops-cp-data-virtualization/ibm-cpd-dv-subcription
+    repoURL: https://github.com/cloud-native-toolkit-test/toolkit-dev-ocp48-gitops2
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  ignoreDifferences: []
